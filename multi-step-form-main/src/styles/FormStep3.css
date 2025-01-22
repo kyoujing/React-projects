@@ -1,0 +1,51 @@
+.addons {
+  margin-top: 5%;
+}
+
+.addonsSelection {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  height: 50%;
+  margin-top: 15px;
+  border: 1px solid silver;
+  border-radius: 8px;
+  position: relative;
+}
+
+.addonsSelection.active {
+  background-color: #f0f8ff;
+  border-color: darkslateblue;
+}
+
+.addonsInput {
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+}
+
+.description h3,
+.description p {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.description p {
+  font-size: 18px;
+}
+
+.addonsSelection span {
+  position: absolute;
+  right: 1%;
+  top: 40%;
+}
+
+@media only screen and (max-width: 790px) {
+  .formStep3 {
+    height: 600px !important;
+  }
+
+  .addonsSelection {
+    margin-left: 5%;
+  }
+}

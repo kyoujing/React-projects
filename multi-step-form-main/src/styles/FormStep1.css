@@ -1,0 +1,70 @@
+.formStep1 input {
+  width: 85%;
+  height: 5%;
+  padding-left: 1%;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a0d6f;
+  border: 2px solid silver;
+  border-radius: 6px;
+  position: relative;
+}
+
+.formStep1 input:hover {
+  cursor: pointer;
+  border-color: #2a0d6f;
+}
+
+.formStep1 label {
+  color: #2a0d6f;
+  margin-top: 3%;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+input::placeholder {
+  color: silver;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.error {
+  position: absolute;
+  right: 14%;
+  color: red;
+}
+
+.errorBorder {
+  border: 2px solid red !important;
+}
+
+.submitBtn {
+  position: absolute;
+  right: 0;
+}
+
+@media only screen and (max-width: 790px) {
+  .formStep1 {
+    height: 500px !important;
+  }
+
+  .formStep1 label,
+  .formStep1 input {
+    margin-left: 5%;
+  }
+
+  .formStep1 input {
+    width: 85%;
+    height: 40px;
+  }
+
+  .error {
+    position: absolute;
+    right: 8%;
+    color: red;
+  }
+}
