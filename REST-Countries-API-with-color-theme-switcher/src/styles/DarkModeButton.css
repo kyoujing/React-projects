@@ -1,0 +1,27 @@
+.dark-mode-btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dark-mode-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.dark-mode-btn img {
+  width: 20px;
+  height: 20px;
+  filter: var(--icon-color);
+}
+
+.dark-mode-btn strong {
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .dark-mode-btn strong {
+    font-size: 14px;
+  }
+}

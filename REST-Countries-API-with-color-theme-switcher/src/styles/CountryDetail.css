@@ -1,0 +1,160 @@
+.back-btn {
+  all: unset;
+  width: 80px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-top: 45px;
+  padding: 5px 15px 5px 10px;
+  color: var(--text-color);
+  background-color: var(--element-bg);
+  opacity: 0.7;
+  font-family: "Nunito Sans", sans-serif;
+  box-shadow: var(--boxshadow);
+  border-radius: 6px;
+}
+
+.back-btn:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.back-icon {
+  width: 20px;
+  height: auto;
+  filter: var(--icon-color);
+  margin-right: 6px;
+}
+
+.country-container {
+  width: 90%;
+  margin-top: 45px;
+  margin-left: 5%;
+}
+
+.country-content {
+  display: flex;
+}
+
+.flag-image-container {
+  width: 45%;
+}
+
+.flag-image {
+  width: 100%;
+  height: 100%;
+}
+
+.country-details {
+  margin-left: 5%;
+  width: 50%;
+}
+
+.country-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-right p,
+.stats-left p {
+  margin-top: 10px;
+}
+
+.stats-right {
+  margin-right: 25%;
+}
+
+h1,
+p {
+  margin-top: 7%;
+  color: var(--text-color);
+}
+
+h1,
+strong {
+  color: var(--text-color);
+  font-weight: 800;
+}
+
+h1 {
+  margin-bottom: 3%;
+}
+
+.border-countries {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.border-countries strong {
+  margin-right: 10px;
+}
+
+.border-countries span {
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 5px 10px 5px 10px;
+  font-weight: 300;
+  color: var(--text-color);
+  background-color: var(--element-bg);
+  box-shadow: var(--boxshadow);
+  border-radius: 4px;
+}
+
+.border-countries span:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 20%;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .back-btn {
+    width: 60px;
+    height: 30px;
+    margin-top: 30px;
+  }
+
+  .country-content {
+    display: block;
+  }
+
+  .flag-image-container {
+    width: 100%;
+  }
+
+  .country-details {
+    width: 100%;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-top: 10%;
+  }
+
+  .country-stats {
+    flex-direction: column;
+  }
+
+  .country-stats p {
+    margin-top: 5px;
+  }
+
+  .stats-right,
+  .border-countries {
+    margin-top: 10%;
+  }
+
+  .border-countries strong {
+    display: block;
+  }
+}

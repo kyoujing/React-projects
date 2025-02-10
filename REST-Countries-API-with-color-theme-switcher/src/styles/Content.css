@@ -1,0 +1,34 @@
+.content {
+  flex: 1;
+  margin-top: 45px;
+  overflow: auto;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+
+.search-filter-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  position: relative;
+}
+
+.main-content {
+  height: auto;
+  margin-top: 45px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-top: 20px;
+  }
+
+  .search-filter-container {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-top: 20px;
+  }
+}
