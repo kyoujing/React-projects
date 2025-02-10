@@ -1,4 +1,4 @@
-#REST-Countries-API-with-color-theme-switcher
+# REST-Countries-API-with-color-theme-switcher
 ![desktop-design-home-dark](https://github.com/user-attachments/assets/78b781a5-961d-42d9-8aa5-d697ac4cf4ad)
 
 # React + Vite
