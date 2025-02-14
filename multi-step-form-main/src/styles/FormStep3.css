@@ -1,51 +1,49 @@
-.addons {
-  margin-top: 5%;
-}
-
-.addonsSelection {
+.addon-card {
   display: flex;
   align-items: center;
-  width: 85%;
-  height: 50%;
-  margin-top: 15px;
+  width: 95%;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border: 1px solid silver;
   border-radius: 8px;
   position: relative;
 }
 
-.addonsSelection.active {
+.addon-card.active {
   background-color: #f0f8ff;
   border-color: darkslateblue;
 }
 
-.addonsInput {
+.addon-card:hover {
+  cursor: pointer;
+}
+
+.addon-checkbox {
   width: 15px;
   height: 15px;
   margin-left: 20px;
 }
 
-.description h3,
-.description p {
+.addon-content h3,
+.addon-content p {
   margin: 0;
   margin-left: 20px;
 }
 
-.description p {
+.addon-content p {
   font-size: 18px;
 }
 
-.addonsSelection span {
+.addon-card span {
   position: absolute;
   right: 1%;
   top: 40%;
 }
 
-@media only screen and (max-width: 790px) {
-  .formStep3 {
-    height: 600px !important;
-  }
-
-  .addonsSelection {
+@media (max-width: 768px) {
+  .addon-card {
+    width: 90%;
     margin-left: 5%;
   }
 }

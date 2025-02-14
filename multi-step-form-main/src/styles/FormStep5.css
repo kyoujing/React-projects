@@ -1,15 +1,23 @@
-.formStep5 {
-  justify-content: center;
-  align-items: center;
+.formStep5 .info {
+  width: 80%;
+  display: grid;
+  place-items: center;
+  margin: 15% 10% 0 10%;
   text-align: center;
 }
 
-@media only screen and (max-width: 790px) {
-  .formStep5 {
-    height: 500px !important;
-  }
+.thankyou-icon {
+  width: 100px;
+  height: 100px;
+}
 
-  .formStep5 p {
+@media (max-width: 768px) {
+  .formStep5 .info {
+    margin-top: 10%;
     padding-right: 6%;
+  }
+  .thankyou-icon {
+    width: 70px;
+    height: 70px;
   }
 }

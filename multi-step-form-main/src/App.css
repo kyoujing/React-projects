@@ -19,32 +19,35 @@
   font-style: normal;
 }
 
+* {
+  font-family: "Ubuntu";
+  box-sizing: border-box;
+}
+
+html,
 body {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
-  margin: auto;
-  font-family: "Ubuntu";
+  align-items: center;
+  margin: 0;
+  padding: 0;
   background-color: #f0f8ff;
 }
 
 #root {
-  width: 60%;
-}
-
-.container {
   display: flex;
-  width: 100%;
-  height: 100%;
-  margin-top: 5%;
+  width: 60%;
+  min-width: 600px;
+  height: 65%;
   background-color: white;
   border-radius: 12px;
 }
 
 .main-content {
-  width: 60%;
-  height: 95%;
-  margin-top: 5%;
-  margin-left: 10%;
+  width: 100%;
+  margin: 20px 5% 20px 5%; 
   position: relative;
 }
 
@@ -53,92 +56,97 @@ body {
 .formStep3,
 .formStep4,
 .formStep5 {
+  width: 100%;
+  min-height: fit-content;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 720px;
+  padding-top: 40px;
+}
+
+.plan-header {
+  width: 90%;  
 }
 
 h1 {
-  margin-top: 5%;
-  margin-bottom: 1%;
-  font-size: 36px;
+  margin-bottom: 0;
   color: #2a0d6f;
 }
 
-h3 {
-  color: #2a0d6f;
-}
-
-p {
-  margin-top: 0;
-  font-size: 20px;
-  color: silver;
-}
-
+h3,
 span {
   color: #2a0d6f;
 }
 
-.btnDiv {
-  width: 85%;
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 5%;
-  height: 10%;
-  margin-left: -1%;
+p {
+  font-weight: 500;
+  font-size: 24px;
+  font-weight: normal;
+  color: silver;
 }
 
-.submitBtn {
-  width: 15%;
-  height: 50%;
+.navigation-buttons {
+  width: 95%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.next-button {
+  width: fit-content;
+  height: 40px;
+  padding: 10px;
   color: white;
   background-color: #001f3f;
-  font-size: 100%;
+  font-size: 16px;
   font-family: "Ubuntu";
   border-color: transparent;
   border-radius: 8px;
 }
 
-.submitBtn:hover {
+.next-button:hover {
   cursor: pointer;
   background-color: #551ade;
 }
 
-.goBackBtn {
-  width: 15%;
-  height: 50%;
+.back-button {
+  width: fit-content;
+  height: 30%;
   border: none;
+  font-size: 16px;
   background-color: transparent;
-  font-size: 100%;
   font-family: "Ubuntu";
   color: silver;
 }
 
-.goBackBtn:hover {
+.back-button:hover {
   color: #1560bd;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 790px) {
+@media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+  
   #root {
     width: 100%;
     height: 100%;
-  }
-
-  .container {
-    margin: 0;
     display: block;
-    height: 70%;
-    width: 100%;
     border-radius: 0;
     background-color: #f0f8ff;
   }
 
   .main-content {
-    margin: auto;
-    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -15%;
+    position:inherit;
   }
 
   .formStep1,
@@ -146,39 +154,42 @@ span {
   .formStep3,
   .formStep4,
   .formStep5 {
-    position: fixed;
-    margin-top: 20%;
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 15%;
     width: 90%;
     background: white;
     border-radius: 12px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   h1,
   p {
+    margin-bottom: 0;
     margin-left: 5%;
   }
 
-  .btnDiv {
+
+  .navigation-buttons {
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    width: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    height: 100px;
     background-color: white;
   }
 
-  .goBackBtn {
+  .back-button {
     width: 15%;
     height: 40%;
+    margin-left: 5%;
     font-weight: 500;
   }
 
-  .submitBtn {
-    width: 15%;
-    height: 40%;
+  .next-button {
+    width: fit-content;
+    height: 50px;
     margin-right: 5%;
-    border-radius: 0;
+    border-radius: 8px;
   }
 }

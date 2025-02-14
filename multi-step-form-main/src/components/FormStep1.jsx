@@ -47,12 +47,13 @@ function FormStep1({ formData, setFormData }) {
 
   return (
     <form className="formStep1" onSubmit={handleSubmit}>
-      <h1>Personal info</h1>
-      <p>Please provide your name, email address, and phone number.</p>
-
+      <div className="plan-header">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+      </div>
       <label htmlFor="name">
         Name
-        {errors.name && <span className="error">{errors.name}</span>}
+        {errors.name && <span className="formStep1-error">{errors.name}</span>}
       </label>
       <input
         type="text"
@@ -61,13 +62,13 @@ function FormStep1({ formData, setFormData }) {
         value={formData.name}
         onChange={handleChange}
         placeholder="e.g. John Smith"
-        className={errors.name ? "errorBorder" : ""}
+        className={errors.name ? "formStep1-errorBorder" : ""}
       />
 
       <label htmlFor="emailAddress">
         Email Address
         {errors.emailAddress && (
-          <span className="error">{errors.emailAddress}</span>
+          <span className="formStep1-error">{errors.emailAddress}</span>
         )}
       </label>
       <input
@@ -77,27 +78,27 @@ function FormStep1({ formData, setFormData }) {
         value={formData.emailAddress}
         onChange={handleChange}
         placeholder="e.g. johnsmith@lorem.com"
-        className={errors.emailAddress ? "errorBorder" : ""}
+        className={errors.emailAddress ? "formStep1-errorBorder" : ""}
       />
 
       <label htmlFor="phoneNumber">
         Phone Number
         {errors.phoneNumber && (
-          <span className="error">{errors.phoneNumber}</span>
+          <span className="formStep1-error">{errors.phoneNumber}</span>
         )}
       </label>
       <input
-        type="number"
+        type="tel"
         id="phoneNumber"
         name="phoneNumber"
         value={formData.phoneNumber}
         onChange={handleChange}
         placeholder="e.g. +1 234 567 890"
-        className={errors.phoneNumber ? "errorBorder" : ""}
+        className={errors.phoneNumber ? "formStep1-errorBorder" : ""}
       />
 
-      <div className="btnDiv">
-        <button type="submit" className="submitBtn">
+      <div className="navigation-buttons">
+        <button type="submit" className="next-button">
           Next Step
         </button>
       </div>

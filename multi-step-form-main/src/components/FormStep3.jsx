@@ -42,30 +42,25 @@ function FormStep3({ formData, setFormData }) {
     });
   };
 
-  const handleGoBack = () => {
+  const handleGoBack = (event) => {
     event.preventDefault();
     navigate("/FormStep2");
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (formData.addonsPrice === 0) {
-      navigate("/FormStep4");
-    } else {
-      console.log("Selected add-ons:", formData.addons);
-      console.log("Addons total price:", formData.addonsPrice);
-      console.log("Addons individual prices:", formData.addonPrices);
-      navigate("/FormStep4");
-    }
+    navigate("/FormStep4");
   };
 
   return (
     <form className="formStep3" onSubmit={handleSubmit}>
-      <h1>Pick add-ons</h1>
-      <p>Add-ons help enhance your gaming experience.</p>
-      <div className="addons">
+      <div className="form-header">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+      </div>
+      <div className="addon-list">
         <label
-          className={`addonsSelection ${
+          className={`addon-card ${
             formData.addons.includes("Online Service") ? "active" : ""
           }`}
         >
@@ -75,9 +70,9 @@ function FormStep3({ formData, setFormData }) {
             value="Online Service"
             checked={formData.addons.includes("Online Service")}
             onChange={handleAddonChange}
-            className="addonsInput"
+            className="addon-checkbox"
           />
-          <div className="description">
+          <div className="addon-content">
             <h3>Online service</h3>
             <p>Access to multiplayer games</p>
           </div>
@@ -85,7 +80,7 @@ function FormStep3({ formData, setFormData }) {
         </label>
 
         <label
-          className={`addonsSelection ${
+          className={`addon-card ${
             formData.addons.includes("Large Storage") ? "active" : ""
           }`}
         >
@@ -95,9 +90,9 @@ function FormStep3({ formData, setFormData }) {
             value="Large Storage"
             checked={formData.addons.includes("Large Storage")}
             onChange={handleAddonChange}
-            className="addonsInput"
+            className="addon-checkbox"
           />
-          <div className="description">
+          <div className="addon-content">
             <h3>Larger storage</h3>
             <p>Extra 1TB of cloud save</p>
           </div>
@@ -105,7 +100,7 @@ function FormStep3({ formData, setFormData }) {
         </label>
 
         <label
-          className={`addonsSelection ${
+          className={`addon-card ${
             formData.addons.includes("Customizable Profile") ? "active" : ""
           }`}
         >
@@ -115,9 +110,9 @@ function FormStep3({ formData, setFormData }) {
             value="Customizable Profile"
             checked={formData.addons.includes("Customizable Profile")}
             onChange={handleAddonChange}
-            className="addonsInput"
+            className="addon-checkbox"
           />
-          <div className="description">
+          <div className="addon-content">
             <h3>Customizable Profile</h3>
             <p>Custom theme on your profile</p>
           </div>
@@ -125,11 +120,11 @@ function FormStep3({ formData, setFormData }) {
         </label>
       </div>
 
-      <div className="btnDiv">
-        <button className="goBackBtn" onClick={handleGoBack}>
+      <div className="navigation-buttons">
+        <button className="back-button" onClick={handleGoBack}>
           Go Back
         </button>
-        <button type="submit" className="submitBtn">
+        <button type="submit" className="next-button">
           Next Step
         </button>
       </div>

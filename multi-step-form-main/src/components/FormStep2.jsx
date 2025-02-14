@@ -10,15 +10,9 @@ function FormStep2({ formData, setFormData }) {
   const [error, setError] = useState("");
 
   const updatePlanPrice = (plan, billingCycle) => {
-    if (plan === "Arcade") {
-      return billingCycle === "Monthly" ? 9 : 90;
-    }
-    if (plan === "Advanced") {
-      return billingCycle === "Monthly" ? 12 : 120;
-    }
-    if (plan === "Pro") {
-      return billingCycle === "Monthly" ? 15 : 150;
-    }
+    if (plan === "Arcade") return billingCycle === "Monthly" ? 9 : 90;
+    if (plan === "Advanced") return billingCycle === "Monthly" ? 12 : 120;
+    if (plan === "Pro") return billingCycle === "Monthly" ? 15 : 150;
     return "";
   };
 
@@ -65,14 +59,13 @@ function FormStep2({ formData, setFormData }) {
 
   return (
     <form className="formStep2" onSubmit={handleSubmit}>
-      <h1>Select your plan</h1>
-      <p>You have the option of monthly or yearly billing.</p>
-
-      <div className="plan">
+      <div className="plan-header">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+      </div>
+      <div className="plan-options">
         <label
-          className={`planSelection ${
-            formData.plan === "Arcade" ? "active" : ""
-          }`}
+          className={`plan-card ${formData.plan === "Arcade" ? "active" : ""}`}
         >
           <input
             type="radio"
@@ -81,20 +74,20 @@ function FormStep2({ formData, setFormData }) {
             checked={formData.plan === "Arcade"}
             onChange={handlePlanChange}
           />
-          <img
-            src={arcadeIcon}
-            alt="arcade"
-            style={{ width: "50px", height: "50px" }}
-          />
-          <h3>Arcade</h3>
-          <p>{formData.billingCycle === "Monthly" ? "$9/mo" : "$90/yr"}</p>
-          {formData.billingCycle === "Yearly" && (
-            <span className="offer">2 months free</span>
-          )}
+          <img src={arcadeIcon} alt="Arcade" width={50} height={50} />
+          <div className="plan-content">
+            <h3 className="plan-title">Arcade</h3>
+            <p className="plan-price">
+              {formData.billingCycle === "Monthly" ? "$9/mo" : "$90/yr"}
+            </p>
+            {formData.billingCycle === "Yearly" && (
+              <span className="plan-offer">2 months free</span>
+            )}
+          </div>
         </label>
 
         <label
-          className={`planSelection ${
+          className={`plan-card ${
             formData.plan === "Advanced" ? "active" : ""
           }`}
         >
@@ -105,20 +98,20 @@ function FormStep2({ formData, setFormData }) {
             checked={formData.plan === "Advanced"}
             onChange={handlePlanChange}
           />
-          <img
-            src={advancedIcon}
-            alt="advanced"
-            style={{ width: "50px", height: "50px" }}
-          />
-          <h3>Advanced</h3>
-          <p>{formData.billingCycle === "Monthly" ? "$12/mo" : "$120/yr"}</p>
-          {formData.billingCycle === "Yearly" && (
-            <span className="offer">2 months free</span>
-          )}
+          <img src={advancedIcon} alt="Advanced" width={50} height={50} />
+          <div className="plan-content">
+            <h3 className="plan-title">Advanced</h3>
+            <p className="plan-price">
+              {formData.billingCycle === "Monthly" ? "$12/mo" : "$120/yr"}
+            </p>
+            {formData.billingCycle === "Yearly" && (
+              <span className="plan-offer">2 months free</span>
+            )}
+          </div>
         </label>
 
         <label
-          className={`planSelection ${formData.plan === "Pro" ? "active" : ""}`}
+          className={`plan-card ${formData.plan === "Pro" ? "active" : ""}`}
         >
           <input
             type="radio"
@@ -128,16 +121,20 @@ function FormStep2({ formData, setFormData }) {
             onChange={handlePlanChange}
           />
           <img src={prodIcon} alt="Pro" width={50} height={50} />
-          <h3>Pro</h3>
-          <p>{formData.billingCycle === "Monthly" ? "$15/mo" : "$150/yr"}</p>
-          {formData.billingCycle === "Yearly" && (
-            <span className="offer">2 months free</span>
-          )}
+          <div className="plan-content">
+            <h3 className="plan-title">Pro</h3>
+            <p className="plan-price">
+              {formData.billingCycle === "Monthly" ? "$15/mo" : "$150/yr"}
+            </p>
+            {formData.billingCycle === "Yearly" && (
+              <span className="plan-offer">2 months free</span>
+            )}
+          </div>
         </label>
       </div>
 
-      <div className="slider-container">
-        <label className="billingToggle">
+      <div className="billing-toggle-container">
+        <label className="billing-toggle">
           <span className={formData.billingCycle === "Monthly" ? "active" : ""}>
             Monthly
           </span>
@@ -153,12 +150,13 @@ function FormStep2({ formData, setFormData }) {
         </label>
       </div>
 
-      {error && <p className="errorMessage">{error}</p>}
-      <div className="btnDiv">
-        <button className="goBackBtn" onClick={handleGoBack}>
+      {error && <p className="error-message">{error}</p>}
+
+      <div className="navigation-buttons">
+        <button className="back-button" onClick={handleGoBack}>
           Go Back
         </button>
-        <button type="submit" className="submitBtn">
+        <button type="submit" className="next-button">
           Next Step
         </button>
       </div>

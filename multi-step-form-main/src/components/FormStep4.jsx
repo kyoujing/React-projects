@@ -35,10 +35,12 @@ function FormStep4({ formData, setFormData }) {
 
   return (
     <form className="formStep4">
-      <h1>Finishing up</h1>
-      <p>Double-check everything looks OK before confirming.</p>
+      <div className="form-header">
+        <h1>Finishing up</h1>
+        <p>Double-check everything looks OK before confirming.</p>
+      </div>
       <div className="summary">
-        <div className="planPart">
+        <div className="plan-info">
           <h3>
             {formData.plan} ({formData.billingCycle})
           </h3>
@@ -46,16 +48,16 @@ function FormStep4({ formData, setFormData }) {
             ${formData.planPrice}
             {isYearly ? "/yr" : "/mo"}
           </span>
-          <button className="changeBtn" onClick={changePlan}>
+          <button className="button-change" onClick={changePlan}>
             Change
           </button>
         </div>
         <div
-          className="addonsPart"
+          className="addons-info"
           style={{ display: formData.addons.length > 0 ? "block" : "none" }}
         >
           {formData.addons.map((addon) => (
-            <div key={addon} className="addonItem">
+            <div key={addon} className="addon-item">
               <p>{addon}</p>
               <span>
                 +${addonPrices[addon] || 0}
@@ -65,18 +67,18 @@ function FormStep4({ formData, setFormData }) {
           ))}
         </div>
       </div>
-      <div className="totalPart">
+      <div className="total-info">
         <p>Total (per {isYearly ? "year" : "month"})</p>
-        <span className="totalPrice">
+        <span className="total-price">
           +${totalPrice}
           {isYearly ? "/yr" : "/mo"}
         </span>
       </div>
-      <div className="btnDiv">
-        <button className="goBackBtn" onClick={handleGoBack}>
+      <div className="navigation-buttons">
+        <button className="back-button" onClick={handleGoBack}>
           Go Back
         </button>
-        <button className="confirmBtn" onClick={toFinalStep}>
+        <button className="confirm-button" onClick={toFinalStep}>
           Confirm
         </button>
       </div>

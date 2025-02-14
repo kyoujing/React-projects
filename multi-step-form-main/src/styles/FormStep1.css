@@ -1,13 +1,12 @@
 .formStep1 input {
-  width: 85%;
-  height: 5%;
-  padding-left: 1%;
+  width: 95%;
+  height: 40px;
+  padding: 10px;
   font-size: 18px;
   font-weight: bold;
   color: #2a0d6f;
-  border: 2px solid silver;
+  border: 1px solid silver;
   border-radius: 6px;
-  position: relative;
 }
 
 .formStep1 input:hover {
@@ -16,8 +15,12 @@
 }
 
 .formStep1 label {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
   color: #2a0d6f;
-  margin-top: 3%;
+  margin-top: 30px;
+  margin-bottom: 5px;
   font-size: 18px;
   font-weight: 500;
 }
@@ -32,39 +35,28 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.error {
-  position: absolute;
-  right: 14%;
+.formStep1-error {
   color: red;
 }
 
-.errorBorder {
-  border: 2px solid red !important;
+.formStep1-errorBorder {
+  border: 1px solid red !important;
 }
 
-.submitBtn {
+.next-button {
   position: absolute;
   right: 0;
 }
 
-@media only screen and (max-width: 790px) {
-  .formStep1 {
-    height: 500px !important;
-  }
-
+@media (max-width: 768px) {
   .formStep1 label,
   .formStep1 input {
+    width: calc(80% + 30px);
     margin-left: 5%;
   }
 
   .formStep1 input {
     width: 85%;
     height: 40px;
-  }
-
-  .error {
-    position: absolute;
-    right: 8%;
-    color: red;
   }
 }

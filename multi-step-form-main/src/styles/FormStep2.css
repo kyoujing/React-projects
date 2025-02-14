@@ -1,58 +1,57 @@
-.plan {
-  width: 85%;
+.plan-options {
+  width: 95%;
+  height: 50%;
   display: flex;
   justify-content: space-between;
 }
 
-.plan input {
+.plan-options input {
   display: none;
 }
 
-.planSelection {
+.plan-card {
   width: 30%;
-  height: auto;
-  margin-top: 3%;
+  flex-direction: column;
+  padding: 15px;
   border: 1px solid silver;
   border-radius: 8px;
   cursor: pointer;
 }
 
-.planSelection.active {
+.plan-card.active {
   background-color: #f0f8ff;
   border-color: darkslateblue;
 }
 
-.planSelection img,
-h3 {
-  margin-top: 10%;
-  margin-left: 5%;
+.plan-card img {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 25%;
 }
 
-.planSelection h3 {
+.plan-title {
   font-weight: 500;
-  margin-top: 30%;
-  margin-bottom: 1%;
+  margin: 0;
 }
 
-.planSelection p,
-.offer {
-  margin-left: 5%;
-  margin-bottom: 1%;
-  font-size: 18px;
+.plan-price {
+  font-size: 16px;
+  margin: 5px 0;
 }
 
-.slider-container {
+.billing-toggle-container {
+  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85%;
-  height: 8%;
-  margin-top: 5%;
+  margin-top: 50px;
+  padding: 10px;
   background-color: #f0f8ff;
   border-radius: 8px;
 }
 
-.billingToggle {
+.billing-toggle {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,14 +59,13 @@ h3 {
   width: 230px;
 }
 
-.billingToggle span.active {
+.billing-toggle span.active {
   color: #001f3f;
 }
 
-.billingToggle span {
+.billing-toggle span {
   margin: 0;
   text-align: center;
-  font-size: 18px;
   font-weight: 500;
   color: silver;
 }
@@ -92,10 +90,10 @@ h3 {
 .slider-checkbox:before {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 3px;
   width: 18px;
   height: 18px;
+  top: 3px;
+  left: 3px;
   background-color: white;
   border-radius: 50%;
   transition: transform 0.3s;
@@ -105,56 +103,42 @@ h3 {
   transform: translateX(26px);
 }
 
-.errorMessage {
+.error-message {
   margin-top: 25px;
   margin-right: 10%;
-  font-size: 26px;
   color: red;
   text-align: center;
 }
 
-@media only screen and (max-width: 790px) {
-  .formStep2 {
-    height: 650px !important;
-  }
-
-  .plan {
+@media (max-width: 768px) {
+  .plan-options {
     flex-direction: column;
     margin-left: 5%;
-    height: 55%;
   }
 
-  .planSelection {
+  .plan-card {
     display: flex;
-    width: 100%;
-    height: 25%;
+    flex-direction: row;
+    align-items: center;
+    width: 95%;
+    margin-top: 20px;
+    padding: 20px;
   }
 
-  .planSelection img {
-    margin-top: 3%;
-    margin-left: 5%;
+  .plan-card img {
+    margin-top: 0;
+    margin-bottom: 3%;
   }
 
-  .planSelection h3 {
-    margin-top: 3%;
-    margin-left: 3%;
-    position: relative;
+  .plan-content {
+    margin-left: 20px;
+    margin-bottom: 0;
   }
 
-  .planSelection p {
-    position: fixed;
-    left: 17.2%;
+  .billing-toggle-container {
+    width: 90%;
     margin-top: 5%;
-  }
-
-  .offer {
-    position: absolute;
-    left: 14%;
-    margin-top: 9%;
-  }
-
-  .slider-container {
-    background-color: transparent;
     margin-left: 5%;
+    padding: 15px;
   }
 }

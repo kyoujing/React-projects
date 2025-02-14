@@ -1,31 +1,29 @@
 .summary {
   width: 85%;
-  height: auto;
   background-color: #f0f8ff;
-  border-radius: 12px;
+  border-radius: 8px;
+  padding: 20px;
 }
 
-.planPart,
-.addonsPart {
+.plan-info,
+.addons-info {
   margin-left: 3%;
   width: 90%;
-  height: auto;
   margin-bottom: 20px;
 }
 
-.planPart {
-  margin-top: -5%;
+.plan-info {
+  margin-top: -2%;
   margin-bottom: 1%;
   border-bottom: 1px solid silver;
   position: relative;
 }
 
-.planPart h3 {
+.plan-info h3 {
   margin-bottom: 0;
-  margin-left: 0;
 }
 
-.planPart span {
+.plan-info span {
   position: absolute;
   top: 0;
   right: 0;
@@ -33,40 +31,42 @@
   font-weight: bold;
 }
 
-.addonItem {
+.addon-item {
   display: flex;
   justify-content: space-between;
+  padding-top: 15px;
 }
 
-.addonItem p,
-.addonItem span {
+.addon-item p,
+.addon-item span {
   margin: 0;
-  padding-top: 15px;
   font-size: 16px;
   font-weight: 500;
 }
 
-.totalPart {
-  width: 78%;
-  margin-left: 2%;
+.total-info {
+  width: 85%;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
-.totalPart p {
+.total-info p {
+  margin-left: 3%;
   margin-top: 3%;
-  margin-left: 0.5%;
   font-size: 16px;
 }
 
-.totalPart span {
+.total-info span {
   color: #244fa5;
   margin-top: 3%;
+  margin-right: 5%;
   font-size: 20px;
   font-weight: bold;
 }
 
-.changeBtn {
+.button-change {
   all: unset;
   margin-bottom: 20px;
   color: silver;
@@ -74,13 +74,13 @@
   font-weight: 500;
 }
 
-.changeBtn:hover {
+.button-change:hover {
   color: darkslateblue;
   cursor: pointer;
 }
 
-.confirmBtn {
-  width: 15%;
+.confirm-button {
+  width: fit-content;
   height: 50%;
   color: white;
   background-color: #00308f;
@@ -88,29 +88,30 @@
   font-family: "Ubuntu";
   border-color: transparent;
   border-radius: 10px;
-  word-wrap: break-word;
+  margin-right: 10%;
 }
 
-.confirmBtn:hover {
+.confirm-button:hover {
   background-color: #7cb9e8;
 }
 
-@media only screen and (max-width: 790px) {
-  .formStep4 {
-    height: 500px !important;
+@media (max-width: 768px) {
+  .summary {
+    margin-top: 30px;
   }
 
   .summary,
-  .totalPart {
+  .total-info {
     width: 80%;
     margin-left: 5%;
   }
 
-  .totalPart p {
+  .total-info p {
     margin-left: 2%;
   }
 
-  .totalPart .totalPrice {
+  .total-info span {
+    margin-top: 2%;
     margin-right: 6%;
   }
 }
