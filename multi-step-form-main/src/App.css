@@ -92,7 +92,7 @@ p {
   align-items: center;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 5%;
 }
 
 .next-button {
@@ -177,6 +177,7 @@ p {
     align-items: center;
     height: 100px;
     background-color: white;
+    bottom: 0;
   }
 
   .back-button {

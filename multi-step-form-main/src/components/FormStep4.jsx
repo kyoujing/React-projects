@@ -19,7 +19,8 @@ function FormStep4({ formData, setFormData }) {
       0
     );
 
-  const handleGoBack = () => {
+  const handleGoBack = (event) => {
+    event.preventDefault();
     navigate("/FormStep3");
   };
 

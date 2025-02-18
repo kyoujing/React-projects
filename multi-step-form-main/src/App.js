@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,56 +14,65 @@ import FormStep5 from "./components/FormStep5";
 import "./App.css";
 
 function App() {
-  const [formData, setFormData] = useState({
-    name: "",
-    emailAddress: "",
-    phoneNumber: "",
-    plan: "",
-    billingCycle: "Monthly",
-    planPrice: 0,
-    addons: [],
-    addonPrice: {},
-    addonsPrice: 0,
+  const [formData, setFormData] = useState(() => {
+    const savedData = localStorage.getItem("formData");
+    return savedData
+      ? JSON.parse(savedData)
+      : {
+          name: "",
+          emailAddress: "",
+          phoneNumber: "",
+          plan: "",
+          billingCycle: "Monthly",
+          planPrice: 0,
+          addons: [],
+          addonPrice: {},
+          addonsPrice: 0,
+        };
   });
+
+  useEffect(() => {
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
 
   return (
     <Router>
-        <Sidebar />
-        <div className="main-content">
-          <Routes>
-            <Route path="/" element={<Navigate to="/FormStep1" />} />
-            <Route
-              path="/FormStep1"
-              element={
-                <FormStep1 formData={formData} setFormData={setFormData} />
-              }
-            />
-            <Route
-              path="/FormStep2"
-              element={
-                <FormStep2 formData={formData} setFormData={setFormData} />
-              }
-            />
-            <Route
-              path="/FormStep3"
-              element={
-                <FormStep3 formData={formData} setFormData={setFormData} />
-              }
-            />
-            <Route
-              path="/FormStep4"
-              element={
-                <FormStep4 formData={formData} setFormData={setFormData} />
-              }
-            />
-            <Route
-              path="/FormStep5"
-              element={
-                <FormStep5/>
-              }
-            />
-          </Routes>
-        </div>
+      <Sidebar />
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Navigate to="/FormStep1" />} />
+          <Route
+            path="/FormStep1"
+            element={
+              <FormStep1 formData={formData} setFormData={setFormData} />
+            }
+          />
+          <Route
+            path="/FormStep2"
+            element={
+              <FormStep2 formData={formData} setFormData={setFormData} />
+            }
+          />
+          <Route
+            path="/FormStep3"
+            element={
+              <FormStep3 formData={formData} setFormData={setFormData} />
+            }
+          />
+          <Route
+            path="/FormStep4"
+            element={
+              <FormStep4 formData={formData} setFormData={setFormData} />
+            }
+          />
+          <Route
+            path="/FormStep5"
+            element={
+              <FormStep5 formData={formData} setFormData={setFormData} />
+            }
+          />
+        </Routes>
+      </div>
     </Router>
   );
 }
