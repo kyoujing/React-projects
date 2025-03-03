@@ -1,0 +1,27 @@
+.rules {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    right: 1vw;
+    bottom: 1vw;
+}
+
+.resetScore-button, .rule-button {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0.5vw;
+    padding: 15px 40px 15px 40px;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgb(140, 172, 172);
+    border-radius: 10px;
+}
+
+.rules button:hover {
+    color: black;
+    background-color: rgb(140, 172, 172);
+    scale: 1.1;
+    cursor: pointer;
+}

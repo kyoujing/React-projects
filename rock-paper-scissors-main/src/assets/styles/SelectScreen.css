@@ -1,0 +1,31 @@
+.content-container {
+    width: 25%;
+    min-width: 250px;
+    height: fit-content;
+    display: flex;
+    margin: 1vw auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-container button {
+    width: 45%;
+    height: 90%;
+    border: 20px solid;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+.content-container button:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.content-container button:last-child {
+    margin: auto;
+}
+
+.content-container button img {
+    width: 45%;
+    height: 50%;
+}
