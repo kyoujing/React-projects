@@ -1,16 +1,20 @@
 .content-container {
-    width: 25%;
-    min-width: 250px;
-    height: fit-content;
+    width: 30vw;
+    height: 30vw;
     display: flex;
-    margin: 1vw auto;
+    margin: 0 auto;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-image: url("../images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-size: 20vw;
+    background-position: center;
+
 }
 
 .content-container button {
     width: 45%;
-    height: 90%;
+    height: 50%;
     border: 20px solid;
     border-radius: 50%;
     opacity: 0.9;
@@ -28,4 +32,31 @@
 .content-container button img {
     width: 45%;
     height: 50%;
+}
+
+@media screen and (max-width: 1280px) {
+    .content-container {
+        width: 45vw;
+        height: 45vw;
+        background-size: 30vw;
+    }
+
+    .content-container button img {
+        height: 55%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .content-container {
+        width: 60vw;
+        height: 60vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-container {
+        margin-top: 0;
+        width: 75vw;
+        height: 60vw;
+    }
 }

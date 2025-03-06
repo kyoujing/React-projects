@@ -9,7 +9,7 @@
 
 .result-container h1 {
   width: 20vw;
-  margin-top: 5vw;
+  margin-top: 8vw;
   color: white;
   font-size: 3vw;
   text-wrap: nowrap;
@@ -25,7 +25,7 @@
   margin-top: 2vw;
   width: 10vw;
   height: 10vw;
-  padding: 20%;
+  padding: 15%;
   background-color: aliceblue;
   border: 20px solid;
   border-radius: 50%;
@@ -62,14 +62,15 @@
     transform: scale(1); 
   }
 }
+
 .result button {
   all: unset;
-  width: fit-content;
-  margin-top: 2vw;
+  width: 10vw;
+  margin-top: 1vw;
   padding: 0.75vw 1vw 0.75vw 1vw;
   font-size: 1.5vw;
   background-color: aliceblue;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .result button:hover {
@@ -78,6 +79,77 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1280px) {
+  .result-container {
+    gap: 2vw;
+  }
+
+  .result-container h1 {
+    width: fit-content;
+    font-size: 5vw;
+  }
+
+  .result-container h2 {
+    font-size: 2.5vw;
+  }
+
+  .player-choice,
+  .computer-choice {
+    width: 35vw;
+  }
+
+  .result button {
+    width: 20vw;
+    border-radius: 8px;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  .result button {
+    border-radius: 6px;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
-  
+  .result-container {
+    width: 90vw;
+    height: 40vw;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .result-container h1 {
+    width: fit-content;
+    font-size: 8vw;
+    margin: 0 auto;
+  }
+
+  .result-container h2 {
+    margin-top: 2.5vw;
+  }
+
+  .player-choice,
+  .computer-choice {
+    width: 45vw;
+    flex-direction: column-reverse;
+  }
+
+  .result {
+    margin-left: 5%;
+    width: 90%;
+    position: absolute;
+    margin-top: 45vw;
+  }
+
+
+  .result button {
+    width: 35vw;
+    height: 5vw;
+    font-size: 4vw;
+    border-radius: 6px;
+  }
+
 }

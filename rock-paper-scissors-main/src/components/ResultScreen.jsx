@@ -87,7 +87,7 @@ function ResultScreen({ updateScore, score }) {
         <div className="result">
           <h1>{resultText}</h1>
           {showPlayAgainButton(score) && (
-            <button onClick={handleBack}>Play Again</button>
+            <button onClick={handleBack}>PLAY AGAIN</button>
           )}
         </div>
       )}
