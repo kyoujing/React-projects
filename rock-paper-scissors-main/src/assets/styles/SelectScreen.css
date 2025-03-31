@@ -1,8 +1,8 @@
 .content-container {
-    width: 30vw;
-    height: 30vw;
+    width: 35%;
+    height: 60%;
     display: flex;
-    margin: 0 auto;
+    margin: 1rem auto;
     flex-wrap: wrap;
     justify-content: space-between;
     background-image: url("../images/bg-triangle.svg");
@@ -15,7 +15,7 @@
 .content-container button {
     width: 45%;
     height: 50%;
-    border: 20px solid;
+    border: 2rem solid;
     border-radius: 50%;
     opacity: 0.9;
 }
@@ -34,11 +34,12 @@
     height: 50%;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1600px) {
     .content-container {
-        width: 45vw;
-        height: 45vw;
-        background-size: 30vw;
+        width: 50%;
+        height: 60%;
+        margin-top: 2rem;
+        background-size: 60%;
     }
 
     .content-container button img {
@@ -46,17 +47,19 @@
     }
 }
 
+
 @media screen and (max-width: 1024px) {
     .content-container {
-        width: 60vw;
-        height: 60vw;
+        width: 50%;
+        height: 50%;
+        margin-top: 6rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     .content-container {
-        margin-top: 0;
-        width: 75vw;
-        height: 60vw;
+        width: 80%;
+        height: 40%;
+        margin-top: auto;
     }
 }
