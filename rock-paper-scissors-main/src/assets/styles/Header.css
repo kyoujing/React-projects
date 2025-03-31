@@ -1,25 +1,25 @@
 .header-container {
-  width: 50vw;
+  width: 50%;
   height: auto;
   display: flex;
-  margin: 60px auto;
+  margin: 2.5% auto;
   justify-content: space-between;
   border: 2px solid rgb(140, 172, 172);
-  border-radius: 12px;
+  border-radius: 0.75rem;
 }
 
 .header-left,
 .header-right {
-  width: 10vw;
-  padding: 0.5vw;
-  margin: 0.75vw;
+  width: 15rem;
+  padding: 0.5rem;
+  margin: 1rem;
 }
 
 .header-left {
   background-image: url("../images/logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  margin-top: 1vw;
+  margin-top: 1.5rem;
 }
 
 .header-right {
@@ -28,17 +28,17 @@
   flex-direction: column;
   align-items: center;
   background-color: aliceblue;
-  border-radius: 12px;
+  border-radius: 0.5rem;
 }
 
 .header-right .score-title {
-  font-size: 1vw;
+  font-size: 2rem;
   font-weight: 500;
   color: rgb(69, 144, 214);
 }
 
 .header-right .score-value {
-  font-size: 4vw;
+  font-size: 6rem;
   font-weight: bolder;
   line-height: 1;
   opacity: 0;
@@ -56,84 +56,19 @@
 
 @media screen and (max-width: 1280px) {
   .header-container {
-    width: 70vw;
-    margin-top: 50px;
-    border-radius: 8px;
+    width: 70%;
   }
-
-  .header-left,
-  .header-right {
-    width: 15vw;
-    padding: 0.75vw;
-    margin: 1vw;
-  }
-
-  .header-right .score-title {
-    font-size: 2vw;
-  }
-
-  .header-right .score-value {
-    font-size: 6vw;
-  }
-
-  .header-right {
-    border-radius: 10px;
-  }
-
 }
 
-@media screen and (max-width: 1024px) {
-  .header-container {
-    width: 80vw;
-    margin-top: 40px;
-    border-radius: 6px;
-  }
-
-  .header-left,
-  .header-right {
-    width: 20vw;
-    padding: 1vw;
-    margin: 1.25vw;
-  }
-
-  .header-right .score-title {
-    font-size: 3vw;
-  }
-
-  .header-right .score-value {
-    font-size: 8vw;
-  }
-
-  .header-right {
-    border-radius: 8px;
-  }
-  
-}
 
 @media screen and (max-width: 768px) {
   .header-container {
-    width: 90vw;
-    margin-top: 20px;
+    width: 80%;
+    margin-top: 5%;
   }
 
   .header-left,
   .header-right {
-    width: 25vw;
-    padding: 1.25vw;
-    margin: 1.5vw;
+    width: 30%;
   }
-
-  .header-right .score-title {
-    font-size: 4vw;
-  }
-
-  .header-right .score-value {
-    font-size: 10vw;
-  }
-
-  .header-right {
-    border-radius: 6px;
-  }
-
 }
-
