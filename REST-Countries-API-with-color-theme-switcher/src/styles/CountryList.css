@@ -10,6 +10,7 @@
 
 .country {
   width: 100%;
+  max-width: 500px;
   background-color: var(--element-bg);
   box-shadow: var(--boxshadow);
   border-radius: 8px;
